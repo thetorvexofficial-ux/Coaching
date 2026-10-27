@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 👇 COACHING NAME: page title mein bhi apna coaching name daalo -->
+<title>Galaxy Coaching Classes | Crack Your Dreams</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07061a;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);--p:#8b5cf6;--c:#22d3ee;--pk:#f472b6;--t:#f1f5f9;--m:#94a3b8}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--p),var(--c),var(--pk));z-index:2000}
+#glow{position:fixed;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 10s ease-in-out infinite alternate}
+@keyframes float{to{transform:translate(60px,-50px) scale(1.2)}}
+header{position:fixed;top:0;width:100%;z-index:1500;background:rgba(7,6,26,.7);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
+.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem}
+.logo{font-weight:800;font-size:1.4rem}
+.logo b{background:linear-gradient(90deg,var(--p),var(--c));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+nav ul{display:flex;gap:1.8rem;list-style:none}
+nav a{color:var(--m);font-weight:500;font-size:.95rem;transition:.3s}
+nav a:hover{color:#fff}
+.btn{display:inline-block;padding:.85rem 2rem;border-radius:50px;font-weight:600;border:none;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--p),#6366f1);box-shadow:0 8px 30px rgba(139,92,246,.45);transition:.35s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 14px 40px rgba(139,92,246,.7)}
+.btn.o{background:transparent;border:1px solid var(--bd);box-shadow:none}
+#burger{display:none;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 1.5rem 4rem;position:relative;overflow:hidden}
+.hero-in{max-width:900px;position:relative;z-index:1}
+.tag{display:inline-block;padding:.4rem 1.2rem;border-radius:30px;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);color:#c4b5fd;font-size:.85rem;font-weight:600;margin-bottom:1.5rem;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:800;line-height:1.15;margin-bottom:1.2rem}
+.grad{background:linear-gradient(90deg,var(--p),var(--c),var(--pk),var(--p));background-size:300%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shift 6s linear infinite}
+@keyframes shift{to{background-position:300%}}
+.cursor{display:inline-block;width:3px;background:var(--c);margin-left:4px;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{color:var(--m);font-size:1.15rem;max-width:640px;margin:0 auto 2.2rem}
+.hero .btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.5rem;max-width:900px;margin:4rem auto 0}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:1.5rem;backdrop-filter:blur(10px)}
+.stat h3{font-size:2.4rem;font-weight:800;background:linear-gradient(90deg,var(--c),var(--p));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat span{color:var(--m);font-size:.9rem}
+.marquee{overflow:hidden;border-block:1px solid var(--bd);padding:1rem 0;background:rgba(255,255,255,.02)}
+.track{display:flex;gap:3rem;width:max-content;animation:scroll 25s linear infinite}
+.track span{font-weight:700;font-size:1.2rem;color:var(--m);white-space:nowrap}
+.track span:nth-child(odd){color:#c4b5fd}
+@keyframes scroll{to{transform:translateX(-50%)}}
+section.s{max-width:1200px;margin:auto;padding:6rem 1.5rem;position:relative;z-index:1}
+.title{text-align:center;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;margin-bottom:.6rem}
+.sub{text-align:center;color:var(--m);margin-bottom:3.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:2rem;backdrop-filter:blur(10px);transition:transform .2s,border-color .3s,box-shadow .3s;transform-style:preserve-3d;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(139,92,246,.6);box-shadow:0 20px 50px rgba(139,92,246,.18)}
+.card::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.08) 50%,transparent 70%);transform:translateX(-100%);transition:.7s}
+.card:hover::after{transform:translateX(100%)}
+.ic{font-size:2.4rem;margin-bottom:1rem;display:inline-block;animation:bob 4s ease-in-out infinite}
+.card h4{font-size:1.2rem;margin-bottom:.5rem}
+.card p{color:var(--m);font-size:.92rem}
+.pill{display:inline-block;margin-top:1rem;padding:.25rem .9rem;border-radius:20px;background:rgba(34,211,238,.12);color:var(--c);font-size:.8rem;font-weight:600}
+.avatar{width:90px;height:90px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:linear-gradient(135deg,var(--p),var(--c));box-shadow:0 0 30px rgba(139,92,246,.5)}
+.fac{text-align:center}
+.slider{max-width:720px;margin:auto;text-align:center;position:relative;min-height:230px}
+.slide{position:absolute;inset:0;opacity:0;transform:translateX(40px);transition:.6s;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide p{font-size:1.2rem;font-style:italic;margin-bottom:1rem}
+.slide b{color:var(--c)}
+.dots{display:flex;gap:.5rem;justify-content:center;margin-top:1rem}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--bd);cursor:pointer;transition:.3s}
+.dots i.on{background:var(--p);width:28px;border-radius:10px}
+.faq{max-width:780px;margin:auto}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:16px;margin-bottom:1rem;overflow:hidden}
+.q button{width:100%;text-align:left;background:none;border:none;color:#fff;padding:1.2rem 1.5rem;font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between}
+.q div{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 1.5rem;color:var(--m)}
+.q.open div{max-height:200px;padding-bottom:1.2rem}
+.q.open button span{transform:rotate(45deg)}
+.q button span{transition:.3s;color:var(--c);font-size:1.3rem}
+.form{max-width:640px;margin:auto}
+.form input,.form select{width:100%;padding:1rem 1.2rem;margin-bottom:1.2rem;border-radius:12px;background:rgba(7,6,26,.7);border:1px solid var(--bd);color:#fff;font-size:1rem;outline:none;transition:.3s}
+.form input:focus,.form select:focus{border-color:var(--p);box-shadow:0 0 18px rgba(139,92,246,.4)}
+.form option{background:#0d0b2b}
+footer{border-top:1px solid var(--bd);background:#04030f;padding:4rem 1.5rem 2rem;position:relative;z-index:1}
+.fg{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem}
+.fg h4{margin-bottom:1rem}
+.fg p{color:var(--m);margin-bottom:.4rem;font-size:.95rem}
+.copy{text-align:center;color:var(--m);font-size:.85rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--bd)}
+.wa{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.8rem;z-index:1800;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.rv{opacity:0;transform:translateY(50px);transition:opacity .9s,transform .9s}
+.rv.show{opacity:1;transform:none}
+@media(max-width:820px){
+ #burger{display:block}
+ nav ul{position:absolute;top:100%;left:0;width:100%;flex-direction:column;background:rgba(7,6,26,.97);padding:0;max-height:0;overflow:hidden;transition:.4s;gap:0}
+ nav ul.open{max-height:400px;padding:1rem 1.5rem}
+ nav li{padding:.6rem 0}
+ .nav .btn{display:none}
+ #glow{display:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div><div id="glow"></div>
+
+<!-- ========================= EDIT ONLY THIS CONFIG ========================= -->
+<script>
+const CONFIG = {
+  name: "Galaxy",                       // 👈 COACHING NAME (sirf naam, jaise "Sharma")
+  fullName: "Galaxy Coaching Classes",  // 👈 COACHING FULL NAME
+  tagline: "Crack Your Dreams With Us", // 👈 Tagline / slogan
+  location: "Pune",             // 👈 LOCATION (sirf city/area, jaise "Lohegaon, Pune")
+  address: "Full address of your coaching center here", // 👈 FULL ADDRESS
+  phone: "9999999999",               // 👈 10-digit PHONE / WHATSAPP number (bina +91)
+  email: "Sample@abccoaching.com",     // 👈 EMAIL
+  timings: "Mon–Sat: 7:00 AM – 8:00 PM", // 👈 TIMINGS
+  year: 2026,
+
+  // 👈 Typing animation mein jo lines badalti rahengi
+  typed: ["JEE & NEET Preparation", "Board Exam Excellence", "Foundation Courses 8th–10th", "Personal Mentorship"],
+
+  // 👈 Hero ke neeche numbers (value = number, label = text)
+  stats: [
+    {v: 5000, s: "+", l: "Students Taught"},
+    {v: 95,   s: "%", l: "Success Rate"},
+    {v: 15,   s: "+", l: "Years Experience"},
+    {v: 30,   s: "+", l: "Expert Faculty"}
+  ],
+
+  // 👈 Scrolling strip (exams / subjects)
+  exams: ["JEE Main","JEE Advanced","NEET","MHT-CET","Boards 10th","Boards 12th","Olympiad","Foundation"],
+
+  // 👈 COURSES (icon, title, desc, tag = duration/class)
+  courses: [
+    {i:"🚀", t:"Course Name 1", d:"Course description likho yahan.", g:"Class 11–12"},
+    {i:"🧬", t:"Course Name 2", d:"Course description likho yahan.", g:"Dropper Batch"},
+    {i:"📐", t:"Course Name 3", d:"Course description likho yahan.", g:"Class 9–10"},
+    {i:"🧪", t:"Course Name 4", d:"Course description likho yahan.", g:"Class 8"},
+    {i:"💻", t:"Course Name 5", d:"Course description likho yahan.", g:"Online Batch"},
+    {i:"🏆", t:"Course Name 6", d:"Course description likho yahan.", g:"Crash Course"}
+  ],
+
+  // 👈 WHY US (features)
+  features: [
+    {i:"👨‍🏫", t:"Expert Faculty", d:"Experienced teachers with proven results."},
+    {i:"📊", t:"Weekly Tests", d:"Regular tests with detailed performance analysis."},
+    {i:"🎯", t:"Small Batches", d:"Personal attention for every student."},
+    {i:"📚", t:"Study Material", d:"Complete notes and practice sets."},
+    {i:"💡", t:"Doubt Sessions", d:"Daily doubt clearing support."},
+    {i:"🤝", t:"Parent Updates", d:"Regular progress reports to parents."}
+  ],
+
+  // 👈 FACULTY (name, subject, qualification)
+  faculty: [
+    {n:"Rahul sir", s:"Physics", q:"M.Sc., 10+ yrs"},
+    {n:"Rakesh sir", s:"Chemistry", q:"M.Sc., 8+ yrs"},
+    {n:"Vedant sir ", s:"Maths", q:"M.Sc., B.Ed., 12+ yrs"},
+    {n:"Teacher Name 4", s:"Biology", q:"M.Sc., 9+ yrs"}
+  ],
+
+  // 👈 STUDENT REVIEWS (text, name, result)
+  reviews: [
+    {t:"best coaching.", n:"Raju", r:"Scored 95% in Boards"},
+    {t:"best faculty and best coaching helped mea lot", n:"Mahesh", r:"AIR 1200 in JEE"},
+    {t:"Review text yahan likho. Student ka experience.", n:"Parent Name 3", r:"Parent of Class 10 student"}
+  ],
+
+  // 👈 FAQ
+  faqs: [
+    {q:"is this sample website", a:"Yes"},
+    {q:"How to contact Team Torvex", a:"Visit our official website "},
+    {q:"Is there a free demo class?", a:"Haan! Call karo ya form bharo, free demo class book kar lo."}
+  ]
+};
+</script>
+<!-- ========================================================================= -->
+
+<header><div class="nav">
+  <!-- Logo mein coaching name auto aa jayega -->
+  <a href="#home" class="logo"><b data-c="name"></b> Classes</a>
+  <nav><ul id="menu">
+    <li><a href="#courses">Courses</a></li><li><a href="#why">Why Us</a></li>
+    <li><a href="#faculty">Faculty</a></li><li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a href="#contact" class="btn">Free Demo</a>
+  <button id="burger" aria-label="Menu">☰</button>
+</div></header>
+
+<section class="hero" id="home">
+  <div class="blob" style="width:420px;height:420px;background:var(--p);top:5%;left:-5%"></div>
+  <div class="blob" style="width:380px;height:380px;background:var(--c);bottom:0;right:-5%;animation-delay:-4s"></div>
+  <div class="blob" style="width:300px;height:300px;background:var(--pk);top:40%;left:45%;animation-delay:-7s"></div>
+  <div class="hero-in">
+    <span class="tag">🎓 Best Coaching in <span data-c="location"></span></span>
+    <h1><span data-c="tagline" class="grad"></span><br><span id="typed"></span><span class="cursor">&nbsp;</span></h1>
+    <p>Join <b data-c="fullName"></b> and turn your hard work into top results with expert teaching, regular tests and personal mentoring.</p>
+    <div class="btns"><a href="#contact" class="btn">Book Free Demo Class</a><a href="#courses" class="btn o">Explore Courses</a></div>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track" id="track"></div></div>
+
+<section class="s" id="courses">
+  <h2 class="title rv">Our <span class="grad">Courses</span></h2>
+  <p class="sub rv">Choose the batch that fits your goal</p>
+  <div class="grid" id="courseGrid"></div>
+</section>
+
+<section class="s" id="why">
+  <h2 class="title rv">Why Choose <span class="grad" data-c="name"></span>?</h2>
+  <p class="sub rv">What makes us different</p>
+  <div class="grid" id="featGrid"></div>
+</section>
+
+<section class="s" id="faculty">
+  <h2 class="title rv">Meet Our <span class="grad">Faculty</span></h2>
+  <p class="sub rv">Mentors who shape toppers</p>
+  <div class="grid" id="facGrid"></div>
+</section>
+
+<section class="s" id="reviews">
+  <h2 class="title rv">Student <span class="grad">Success Stories</span></h2>
+  <p class="sub rv">Words from our students & parents</p>
+  <div class="slider rv" id="slider"></div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<section class="s" id="faq">
+  <h2 class="title rv">Frequently Asked <span class="grad">Questions</span></h2>
+  <p class="sub rv">Got doubts? We have answers</p>
+  <div class="faq rv" id="faqList"></div>
+</section>
+
+<section class="s" id="contact">
+  <h2 class="title rv">Book Your <span class="grad">Free Demo</span></h2>
+  <p class="sub rv">Fill the form and we will contact you on WhatsApp</p>
+  <div class="card form rv"><form id="enq">
+    <input type="text" id="sn" placeholder="Student Name" required>
+    <input type="tel" id="sp" placeholder="Mobile Number" required pattern="[0-9]{10}">
+    <select id="sc"></select>
+    <input type="text" id="sl" placeholder="Class / Standard (e.g. 10th)">
+    <button class="btn" style="width:100%" type="submit">Send Enquiry on WhatsApp</button>
+  </form></div>
+</section>
+
+<footer>
+  <div class="fg">
+    <div><h4 data-c="fullName"></h4><p data-c="tagline"></p><p>📍 <span data-c="address"></span></p></div>
+    <div><h4>Timings</h4><p data-c="timings"></p></div>
+    <div><h4>Contact</h4><p>📞 <span data-c="phone"></span></p><p>✉️ <span data-c="email"></span></p><p>🏙️ <span data-c="location"></span></p></div>
+  </div>
+  <div class="copy">&copy; <span data-c="year"></span> <span data-c="fullName"></span>. All rights reserved.</div>
+</footer>
+
+<a class="wa" id="waBtn" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script>
+const $=s=>document.querySelector(s), C=CONFIG;
+// Fill all text placeholders
+document.querySelectorAll('[data-c]').forEach(e=>e.textContent=C[e.dataset.c]);
+document.title=`${C.fullName} | ${C.tagline}`;
+$('#waBtn').href=`https://wa.me/91${C.phone}?text=${encodeURIComponent('Hello '+C.fullName+', I want to know more about your courses.')}`;
+
+// Build sections
+$('#stats').innerHTML=C.stats.map(s=>`<div class="stat rv"><h3><span class="count" data-v="${s.v}">0</span>${s.s}</h3><span>${s.l}</span></div>`).join('');
+$('#track').innerHTML=[...C.exams,...C.exams].map(e=>`<span>✦ ${e}</span>`).join('');
+$('#courseGrid').innerHTML=C.courses.map(c=>`<div class="card tilt rv"><div class="ic">${c.i}</div><h4>${c.t}</h4><p>${c.d}</p><span class="pill">${c.g}</span></div>`).join('');
+$('#featGrid').innerHTML=C.features.map(c=>`<div class="card tilt rv"><div class="ic">${c.i}</div><h4>${c.t}</h4><p>${c.d}</p></div>`).join('');
+$('#facGrid').innerHTML=C.faculty.map(f=>`<div class="card tilt fac rv"><div class="avatar">👨‍🏫</div><h4>${f.n}</h4><p style="color:var(--c);font-weight:600">${f.s}</p><p>${f.q}</p></div>`).join('');
+$('#slider').innerHTML=C.reviews.map((r,i)=>`<div class="slide${i?'':' on'}"><p>“${r.t}”</p><b>${r.n}</b><br><small style="color:var(--m)">${r.r}</small></div>`).join('');
+$('#dots').innerHTML=C.reviews.map((_,i)=>`<i class="${i?'':'on'}" data-i="${i}"></i>`).join('');
+$('#faqList').innerHTML=C.faqs.map(f=>`<div class="q"><button>${f.q}<span>+</span></button><div>${f.a}</div></div>`).join('');
+$('#sc').innerHTML='<option>General Enquiry</option>'+C.courses.map(c=>`<option>${c.t}</option>`).join('');
+
+// Typing effect
+let ti=0,ci=0,del=false;
+(function type(){
+  const w=C.typed[ti];
+  $('#typed').textContent=w.slice(0,ci);
+  if(!del&&ci===w.length){del=true;return setTimeout(type,1500)}
+  if(del&&ci===0){del=false;ti=(ti+1)%C.typed.length}
+  ci+=del?-1:1;setTimeout(type,del?40:80);
+})();
+
+// Scroll reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('show');
+  e.target.querySelectorAll('.count').forEach(n=>{
+    const v=+n.dataset.v;let c=0;const st=Math.max(1,v/60);
+    const t=setInterval(()=>{c+=st;if(c>=v){c=v;clearInterval(t)}n.textContent=Math.floor(c)},25);
+  });
+  io.unobserve(e.target);
+}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%4)*.1+'s';io.observe(e)});
+
+// Scroll progress, glow cursor, 3D tilt
+addEventListener('scroll',()=>{$('#progress').style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%'});
+addEventListener('mousemove',e=>{const g=$('#glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+document.querySelectorAll('.tilt').forEach(el=>{
+  el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    el.style.transform=`perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-6px)`});
+  el.addEventListener('mouseleave',()=>el.style.transform='');
+});
+
+// Reviews slider
+let si=0;const sl=document.querySelectorAll('.slide'),dt=document.querySelectorAll('.dots i');
+function go(n){sl[si].classList.remove('on');dt[si].classList.remove('on');si=n;sl[si].classList.add('on');dt[si].classList.add('on')}
+dt.forEach(d=>d.onclick=()=>go(+d.dataset.i));
+setInterval(()=>go((si+1)%sl.length),4500);
+
+// FAQ accordion
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+
+// Mobile menu
+$('#burger').onclick=()=>$('#menu').classList.toggle('open');
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>$('#menu').classList.remove('open'));
+
+// Enquiry -> WhatsApp
+$('#enq').addEventListener('submit',e=>{
+  e.preventDefault();
+  const m=`Hello ${C.fullName}, I want to book a free demo.\n- Student: ${$('#sn').value}\n- Phone: ${$('#sp').value}\n- Course: ${$('#sc').value}\n- Class: ${$('#sl').value}`;
+  window.open(`https://wa.me/91${C.phone}?text=${encodeURIComponent(m)}`,'_blank');
+});
+</script>
+</body>
+</html>
